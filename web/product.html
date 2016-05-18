@@ -1,0 +1,359 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+    <script src="./js/jquery.js" type=text/javascript></script>
+    <script src="./js/kandytabs.pack.js" type=text/javascript></script>
+    <script src="./js/custom.js" type=text/javascript></script>
+    <link href="./css/page.css" rel="stylesheet" type="text/css">
+    <script type=text/javascript>
+        function menuFix() {
+            var sfEls = document.getElementById("menuu").getElementsByTagName("li");
+            for (var i=0; i<sfEls.length; i++) {
+                sfEls[i].onmouseover=function() {
+                    this.className+=(this.className.length>0? " ": "") + "sfhover";
+                }
+                sfEls[i].onMouseDown=function() {
+                    this.className+=(this.className.length>0? " ": "") + "sfhover";
+                }
+                sfEls[i].onMouseUp=function() {
+                    this.className+=(this.className.length>0? " ": "") + "sfhover";
+                }
+                sfEls[i].onmouseout=function() {
+                    this.className=this.className.replace(new RegExp("( ?|^)sfhover\\b"),
+                            "");
+                }
+            }
+        }
+        window.onload=menuFix;
+    </script>
+    <title>博奥生物</title>
+</head>
+<style type="text/css">
+    #imageplay  .changeDiv h3{ display:none; background:none; }
+    #imageplay  .changeDiv h3{ bottom:5px;}
+    #bannerplay div{ border:none;}
+    #bannerplay div .ul_changeThumb{right:30px; bottom:-35px; height:80px;}
+    #bannerplay div .imgbox{ height:80px; }
+    #bannerplay div .ul_changeThumb li{ height:74px; background:url(images/shadowbg.gif) no-repeat scroll center bottom transparent;}
+    #bannerplay div .ul_changeThumb li a{ width:60px; height:60px; overflow:hidden; display:block; position:relative; zoom:1;}
+    #bannerplay div .ul_changeThumb li b{ width:60px; height:60px; overflow:hidden; display:block;  position: absolute; left:0; top:0; background:url(images/thumbImgBorder.gif) no-repeat left top; z-index:2000; }
+    #bannerplay div .ul_changeThumb li .picBox{ width:56px; height:56px; overflow:hidden; position:absolute; top:2px; left:2px; display:block; background:#000;}
+    #bannerplay div .ul_changeThumb li img{ position:relative; left:-5px;  border:none; opacity:0.8; _filter:alpha(opacity=80); }
+    #bannerplay div .ul_changeThumb li.now{ background:url(images/shadowcurrentbg.gif) no-repeat scroll center bottom transparent}
+    #bannerplay div .ul_changeThumb li.now b{ background:url(images/thumbImgBorder_cur.gif) no-repeat 0 0; }
+    #bannerplay div .ul_changeThumb li.now img{ opacity:1.0; _filter:alpha(opacity=100)}
+</style>
+<body >
+<!--头部开始-->
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<script type=text/javascript>
+    function menuFix() {
+        var sfEls = document.getElementById("menuu").getElementsByTagName("li");
+        for (var i=0; i<sfEls.length; i++) {
+            sfEls[i].onmouseover=function() {
+                this.className+=(this.className.length>0? " ": "") + "sfhover";
+            }
+            sfEls[i].onMouseDown=function() {
+                this.className+=(this.className.length>0? " ": "") + "sfhover";
+            }
+            sfEls[i].onMouseUp=function() {
+                this.className+=(this.className.length>0? " ": "") + "sfhover";
+            }
+            sfEls[i].onmouseout=function() {
+                this.className=this.className.replace(new RegExp("( ?|^)sfhover\\b"),
+                        "");
+            }
+        }
+    }
+    window.onload=menuFix;
+</script>
+
+<div class="pageWidth header">
+    <div class="navbg">
+        <div class="logo fl"><img src="./images/logo.gif" /></div>
+        <div class="navall fr">
+            <div class="c_or_en"><a href="/" class="en" target="_blank">English</a></div>
+            <div class="nav" id="menuu">
+                <ul>
+                    <li><a id="index" href="index.shtml">首页</a></li>
+                    <li style="width: 63px;">
+                        <a id="000030" href="cp/index.shtml">关于我们</a>
+                        <ul>
+                            <li  style="width:90px;"><a href="cp/kjsyb/yqcp/index.shtml">企业介绍模板</a></li>
+
+                            <li  style="width:90px;"><a href="cp/kjsyb/hcysj/index.shtml">文章最终页</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a id="000031" href="bw/index.shtml">产品</a>
+                        <ul>
+                            <!--循环：catalog count：50-->
+
+                            <li style="width:130px;"><a href="http://bioservices.capitalbio.com//">产品目录页</a></li>
+
+                            <li style="width:130px;"><a href="http://health.capitalbio.com">产品列表页</a></li>
+
+                            <li style="width:130px;"><a href="bw/wjgjsbw/jsfw/index.shtml">产品最终页</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="onlywidth"><a id="000032" href="khqc/yhsyb/jswd/index.shtml">应用方案</a>
+                        <ul>
+                            <!--循环：catalog count：50-->
+
+                            <li style="width:140px;"><a href="http://science.capitalbio.com/khfbwz/smkxsbxg/index.shtml" target="_blank">工业安全</a></li>
+
+                            <li style="width:140px;"><a href="khqc/yhsyb/jswd/gsfbwxyzz/index.shtml" target="_blank">维修保养</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="noline onlywidth"><a id="000033" href="gxba/gcgc/gcjg/index.shtml">服务与支持</a>
+                        <ul>
+                            <!--循环：catalog count：50-->
+
+                            <li style="width:84px;"><a href="gxba/gcgc/gcjg/index.shtml">售后服务</a></li>
+
+                            <li style="width:84px;"><a href="gxba/zxgc/zxjg/index.shtml">技术知识</a></li>
+
+                            <li style="width:84px;"><a href="gxba/xwzx/index.shtml">多媒体中心</a></li>
+
+                            <li style="width:84px;"><a href="gxba/jsxj/jsbs/index.shtml">资料下载</a></li>
+
+                            <li style="width:84px;"><a href="gxba/ljwm/lxfs/index.shtml">维修申请</a></li>
+                            <li style="width:84px;"><a href="gxba/ljwm/lxfs/index.shtml">网上留言</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="noline onlywidth"><a id="000033" href="gxba/gcgc/gcjg/index.shtml">研发创新</a>
+                        <ul>
+                            <li style="width:100px;"><a href="gxba/jsxj/jsbs/index.shtml">研发团队</a></li>
+                            <li style="width:100px;"><a href="gxba/jsxj/jsbs/index.shtml">对外交流合作</a></li>
+                        </ul>
+                    </li>
+                    <li class="000031"><a id="000033" href="gxba/gcgc/gcjg/index.shtml">成功案例</a>
+
+                    </li>
+                </ul>
+                <div class="search fr">
+                    <form action="" style="padding:0px; margin:0px;">
+                        <input type="hidden" id="site" name="site" value="1" />
+                        <input class="seartext" name="query" id="query" type="text"/><input class="searbtn" type="submit" value="搜索" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--头部结束-->
+<!--主体内容开始-->
+<div class="pageWidth main" style="width:1000px;">
+    <div class="banner fl"><img src="./images/pro_banner.jpg" /></div>
+    <div class="listleft fl">
+        <h3>产品<span>Products</span></h3>
+        <div id="menu">
+            <h1 onClick="javascript:ShowMenu(this,0)" style="margin-top:0;"><a href="javascript:void(0)">仪器</a></h1>
+      <span class="no">
+      <!--循环：catalog count：50-->
+
+
+      <h2 onClick="javascript:ShowMenu(this,0)"><a id="000030000004" href="javascript:void(0)"><i style="font-family:'宋体', Geneva, sans-serif; display:inline-block;">&middot;</i>仪器产品</a></h2>
+  	  <ul class="no">
+          <!--循环：catalog count：20-->
+
+
+          <a id="000030000004000001" href="http://science.capitalbio.com/yqcp/swxpbs/index.shtml" target="_blank"><i style="font-family:'宋体', Geneva, sans-serif; display:inline-block;">&middot;</i>生物芯片平台</a>
+
+
+
+          <a id="000030000004000002" href="http://science.capitalbio.com/yqcp/gssys/index.shtml" target="_blank"><i style="font-family:'宋体', Geneva, sans-serif; display:inline-block;">&middot;</i>核酸实验室</a>
+
+
+
+          <a id="000030000004000003" href="http://science.capitalbio.com/yqcp/dbsys/index.shtml" target="_blank"><i style="font-family:'宋体', Geneva, sans-serif; display:inline-block;">&middot;</i>蛋白实验室</a>
+
+
+
+          <a id="000030000004000006" href="http://science.capitalbio.com/yqcp/tysyssb/index.shtml" target="_blank"><i style="font-family:'宋体', Geneva, sans-serif; display:inline-block;">&middot;</i>通用实验室设备</a>
+
+
+
+          <a id="000030000004000008" href="./cp/yhsyb/yqcp/index.shtml" target="_blank"><i style="font-family:'宋体', Geneva, sans-serif; display:inline-block;">&middot;</i>临床检验仪器</a>
+
+
+      </ul>
+
+
+
+      <h2 onClick="javascript:ShowMenu(this,1)"><a id="000030000005" href="javascript:void(0)"><i style="font-family:'宋体', Geneva, sans-serif; display:inline-block;">&middot;</i>耗材与试剂</a></h2>
+  	  <ul class="no">
+          <!--循环：catalog count：20-->
+
+
+          <a id="000030000005000001" href="http://science.capitalbio.com/hcysj/swxphc/index.shtml" target="_blank"><i style="font-family:'宋体', Geneva, sans-serif; display:inline-block;">&middot;</i>生物芯片耗材</a>
+
+
+
+          <a id="000030000005000004" href="./cp/yhsyb/sjcp/index.shtml" target="_blank"><i style="font-family:'宋体', Geneva, sans-serif; display:inline-block;">&middot;</i>临床检验试剂</a>
+
+
+      </ul>
+
+
+
+      <h2 onClick="javascript:ShowMenu(this,2)"><a id="000030000006" href="javascript:void(0)"><i style="font-family:'宋体', Geneva, sans-serif; display:inline-block;">&middot;</i>软件</a></h2>
+  	  <ul class="no">
+          <!--循环：catalog count：20-->
+
+
+          <a id="000030000006000001" href="http://science.capitalbio.com/rj/rjysjk/index.shtml" target="_blank"><i style="font-family:'宋体', Geneva, sans-serif; display:inline-block;">&middot;</i>软件与数据库</a>
+
+
+      </ul>
+
+
+      </span>
+            <h1 style="margin-top:0;" onClick="javascript:ShowMenu(this,1)"><a href="javascript:void(0)">耗材与试剂</a></h1>
+      <span class="no">
+      <!--循环：catalog count：50-->
+
+
+      	<h2><a id="000030000005000001" style="background:none" href="http://science.capitalbio.com/hcysj/swxphc/index.shtml" target="_blank"><i style="font-family:'宋体', Geneva, sans-serif; display:inline-block;">&middot;</i>生物芯片耗材</a></h2>
+
+
+
+      <h2 onClick="javascript:ShowMenu(this,1)"><a id="000030000005000004" href="javascript:void(0)"><i style="font-family:'宋体', Geneva, sans-serif; display:inline-block;">&middot;</i>临床检验试剂</a></h2>
+  	  <ul class="no">
+          <!--循环：catalog count：20-->
+
+
+          <a id="000030000005000004000001" href="http://medical.capitalbio.com/sjcp/pcrzdsj/" target="_blank"><i style="font-family:'宋体', Geneva, sans-serif; display:inline-block;">&middot;</i>PCR诊断试剂</a>
+
+
+
+          <a id="000030000005000004000002" href="http://medical.capitalbio.com/sjcp/xpzdsj/" target="_blank"><i style="font-family:'宋体', Geneva, sans-serif; display:inline-block;">&middot;</i>芯片诊断试剂</a>
+
+
+
+          <a id="000030000005000004000003" href="http://medical.capitalbio.com/sjcp/hhfgmyzdsj/" target="_blank"><i style="font-family:'宋体', Geneva, sans-serif; display:inline-block;">&middot;</i>化学发光免疫诊断试剂</a>
+
+
+      </ul>
+
+
+      </span>
+            <h1 style="margin-top:0;" onClick="javascript:ShowMenu(this,2)"><a href="javascript:void(0)">软件</a></h1>
+      <span class="no">
+      <!--循环：catalog count：50-->
+
+
+      	<h2><a id="000030000006000001" style="background:none" href="http://science.capitalbio.com/rj/rjysjk/index.shtml" target="_blank"><i style="font-family:'宋体', Geneva, sans-serif; display:inline-block;">&middot;</i>软件与数据库</a></h2>
+
+
+      </span>
+        </div>
+        <div class="menubottom"></div>
+    </div>
+    <div class="listright fr">
+        <div class="pro_list">
+            <h2>科技事业部</h2>
+            <p class="pro1"><a class="zt"><span>仪器产品</span></a></p>
+            <div class="flo">
+                <table border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <!--循环：catalog count：50-->
+
+                        <td valign="top" align="center"><a href="http://science.capitalbio.com/yqcp/swxpbs/index.shtml" target="_blank"><img src="./images/319251.gif"></a><br/><a href="http://science.capitalbio.com/yqcp/swxpbs/index.shtml"><p>生物芯片平台</p></a></td>
+
+
+                        <td valign="top" align="center"><a href="http://science.capitalbio.com/yqcp/gssys/index.shtml" target="_blank"><img src="./images/32121694.gif"></a><br/><a href="http://science.capitalbio.com/yqcp/gssys/index.shtml"><p>核酸实验室</p></a></td>
+
+
+                        <td valign="top" align="center"><a href="http://science.capitalbio.com/yqcp/dbsys/index.shtml" target="_blank"><img src="./images/32099456.gif"></a><br/><a href="http://science.capitalbio.com/yqcp/dbsys/index.shtml"><p>蛋白实验室</p></a></td>
+
+
+                        <td valign="top" align="center"><a href="http://science.capitalbio.com/yqcp/tysyssb/index.shtml" target="_blank"><img src="./images/32084707.gif"></a><br/><a href="http://science.capitalbio.com/yqcp/tysyssb/index.shtml"><p>通用实验室设备</p></a></td>
+
+
+                        <td valign="top" align="center"><a href="./cp/yhsyb/yqcp/index.shtml" target="_blank"><img src="./images/237611896.gif"></a><br/><a href="./cp/yhsyb/yqcp/index.shtml"><p>临床检验仪器</p></a></td>
+
+
+
+                    </tr>
+                </table>
+            </div>
+            <p class="pro1"><a class="zt"><span>耗材与试剂</span></a></p>
+            <div class="flo">
+                <table border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <!--循环：catalog count：50-->
+
+                        <td valign="top" align="center"><a href="http://science.capitalbio.com/hcysj/swxphc/index.shtml" target="_blank"><img src="./images/31995804.gif"></a><br/><a href="http://science.capitalbio.com/hcysj/swxphc/index.shtml"><p>生物芯片耗材</p></a></td>
+
+
+                        <td valign="top" align="center"><a href="./cp/yhsyb/sjcp/index.shtml" target="_blank"><img src="./"></a><br/><a href="./cp/yhsyb/sjcp/index.shtml"><p>临床检验试剂</p></a></td>
+
+
+                    </tr>
+                </table>
+            </div>
+            <p class="pro1"><a class="zt"><span>软件</span></a></p>
+            <div class="flo">
+                <table border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <!--循环：catalog count：50-->
+
+                        <td valign="top" align="center"><a href="http://science.capitalbio.com/rj/rjysjk/index.shtml" target="_blank"><img src="./images/3201324.gif"></a><br/><a href="http://science.capitalbio.com/rj/rjysjk/index.shtml"><p>软件与数据库</p></a></td>
+
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<!--主体内容结束-->
+<!--页脚开始-->
+<div class="pageWidth footer" style="width:1000px;">
+    <div class="f_content">Copyright&nbsp;&#169;&nbsp;2000-2014博奥生物集团有限公司&nbsp;京ICP备05068228号&nbsp;《互联网药品信息服务资格证书》：（京）-非经营性-2011-0017&nbsp;服务监督电话：800-810-1927&nbsp;&nbsp;技术支持：<a style="color:#747474;" href="http://www.zving.com" target="_blank">泽元软件</a></div>
+</div>
+<!--页脚结束-->
+</body>
+<script type="text/javascript">
+    function getPrevSibling(obj){
+        var x = obj.previousSibling;
+        while (x&&x.nodeType!=1){
+            x = x.previousSibling;
+        }
+        return x;
+    }
+
+    var curCatalogInnerCode="000030000004";//获取当前页面所在栏目的InnerCode，这句不能够写在外部js文件里
+    for(var i=1,len=curCatalogInnerCode.length; i<len/6+1; i++){
+        var innerCode=curCatalogInnerCode.substring(0,i*6);
+        var catalogElement=document.getElementById(innerCode);
+        if(catalogElement){
+            catalogElement.className+="menucurrent current";
+        }
+    }
+    if (document.getElementById(curCatalogInnerCode) && curCatalogInnerCode.length == 24) {
+        var parentele=document.getElementById(curCatalogInnerCode).parentNode.parentNode;
+        document.getElementById(curCatalogInnerCode).parentNode.className="";
+        parentele.className="";
+        getPrevSibling(parentele).className="h1";
+    }else if(document.getElementById(curCatalogInnerCode) && curCatalogInnerCode.length == 18){
+        var parentele=document.getElementById(curCatalogInnerCode).parentNode.parentNode;
+        parentele.className="";
+        getPrevSibling(parentele).className="h1";
+    }
+</script>
+</html>
+<script src="http://cn.capitalbio.com/cms/Services/Stat.js" type="text/javascript"></script>
+<script>
+    if(window._zcms_stat)_zcms_stat("SiteID=1&Type=Article&CatalogInnerCode=000030000004&LeafID=&Dest=http://cn.capitalbio.com/cms/Services/Stat.jsp");
+</script>
+
+<!-- Powered by ZCMS(泽元内容管理系统) 1.4.0.18085 PublishDate 2016-04-27 08:56:28-->
