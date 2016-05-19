@@ -3,7 +3,7 @@ if(!defined('InEmpireCMS'))
 {
 	exit();
 }
-?><table width='100%' align=center cellpadding=3 cellspacing=1 class="tableborder"><tr><td width='16%' height=25 bgcolor='ffffff'>标题(*)</td><td bgcolor='ffffff'><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#DBEAF5">
+?><table width='100%' align=center cellpadding=3 cellspacing=1 bgcolor='#DBEAF5'><tr><td width='16%' height=25 bgcolor='ffffff'>标题</td><td bgcolor='ffffff'><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#DBEAF5">
 <tr> 
   <td height="25" bgcolor="#FFFFFF">
 	<?=$tts?"<select name='ttid'><option value='0'>标题分类</option>$tts</select>":""?>
@@ -19,7 +19,12 @@ if(!defined('InEmpireCMS'))
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;颜色: <input name="titlecolor" type="text" value="<?=stripSlashes($r[titlecolor])?>" size="10"><a onclick="foreColor();"><img src="../data/images/color.gif" width="21" height="21" align="absbottom"></a>
   </td>
 </tr>
-</table></td></tr><tr><td width='16%' height=25 bgcolor='ffffff'>副标题</td><td bgcolor='ffffff'>[!--ftitle--]</td></tr><tr><td width='16%' height=25 bgcolor='ffffff'>特殊属性</td><td bgcolor='ffffff'><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#DBEAF5">
+</table></td></tr><tr><td width='16%' height=25 bgcolor='ffffff'>资料下载</td><td bgcolor='ffffff'>
+<input name="dowload" type="text" id="dowload" value="<?=$ecmsfirstpost==1?"":ehtmlspecialchars(stripSlashes($r[dowload]))?>" size="45">
+<a onclick="window.open('ecmseditor/FileMain.php?type=1&classid=<?=$classid?>&infoid=<?=$id?>&filepass=<?=$filepass?>&sinfo=1&doing=1&field=dowload<?=$ecms_hashur[ehref]?>','','width=700,height=550,scrollbars=yes');" title="选择已上传的图片"><img src="../data/images/changeimg.gif" border="0" align="absbottom"></a> 
+</td></tr><tr><td width='16%' height=25 bgcolor='ffffff'>产品视频地址</td><td bgcolor='ffffff'>
+<input name="video" type="text" id="video" value="<?=$ecmsfirstpost==1?"":ehtmlspecialchars(stripSlashes($r[video]))?>" size="">
+</td></tr><tr><td width='16%' height=25 bgcolor='ffffff'>特殊属性</td><td bgcolor='ffffff'><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#DBEAF5">
   <tr>
     <td height="25" bgcolor="#FFFFFF">信息属性: 
       <input name="checked" type="checkbox" value="1"<?=$r[checked]?' checked':''?>>
@@ -45,7 +50,8 @@ if(!defined('InEmpireCMS'))
       <font color="#666666">(填写后信息连接地址将为此链接)</font></td>
   </tr>
 </table></td></tr><tr><td width='16%' height=25 bgcolor='ffffff'>发布时间</td><td bgcolor='ffffff'><input name="newstime" type="text" value="<?=$r[newstime]?>"><input type=button name=button value="设为当前时间" onclick="document.add.newstime.value='<?=$todaytime?>'"></td></tr><tr><td width='16%' height=25 bgcolor='ffffff'>标题图片</td><td bgcolor='ffffff'><input name="titlepic" type="text" id="titlepic" value="<?=$ecmsfirstpost==1?"":ehtmlspecialchars(stripSlashes($r[titlepic]))?>" size="45">
-<a onclick="window.open('ecmseditor/FileMain.php?type=1&classid=<?=$classid?>&infoid=<?=$id?>&filepass=<?=$filepass?>&sinfo=1&doing=1&field=titlepic<?=$ecms_hashur[ehref]?>','','width=700,height=550,scrollbars=yes');" title="选择已上传的图片"><img src="../data/images/changeimg.gif" border="0" align="absbottom"></a></td></tr><tr><td width='16%' height=25 bgcolor='ffffff'>内容简介</td><td bgcolor='ffffff'><textarea name="smalltext" cols="80" rows="10" id="smalltext"><?=$ecmsfirstpost==1?"":ehtmlspecialchars(stripSlashes($r[smalltext]))?></textarea>
+<a onclick="window.open('ecmseditor/FileMain.php?type=1&classid=<?=$classid?>&infoid=<?=$id?>&filepass=<?=$filepass?>&sinfo=1&doing=1&field=titlepic<?=$ecms_hashur[ehref]?>','','width=700,height=550,scrollbars=yes');" title="选择已上传的图片"><img src="../data/images/changeimg.gif" border="0" align="absbottom"></a> 
+</td></tr><tr><td width='16%' height=25 bgcolor='ffffff'>内容简介</td><td bgcolor='ffffff'><textarea name="smalltext" cols="80" rows="10" id="smalltext"><?=$ecmsfirstpost==1?"":ehtmlspecialchars(stripSlashes($r[smalltext]))?></textarea>
 </td></tr><tr><td width='16%' height=25 bgcolor='ffffff'>作者</td><td bgcolor='ffffff'><?=ECMS_ShowEditorVar("writer",$ecmsfirstpost==1?"":stripSlashes($r[writer]),"Default","","300","100%")?>
 <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#DBEAF5">
           <tr> 
@@ -103,7 +109,7 @@ if(!defined('InEmpireCMS'))
       )</td>
           </tr>
         </table>
-</td></tr><tr><td height=25 colspan=2 bgcolor='ffffff'><div align=left>新闻正文(*)</div></td></tr></table><div style="background-color:#D0D0D0"><?=ECMS_ShowEditorVar("newstext",$ecmsfirstpost==1?"":stripSlashes($r[newstext]),"Default","","300","100%")?>
+</td></tr><tr><td height=25 colspan=2 bgcolor='ffffff'><div align=left>新闻正文</div></td></tr></table><div style='background-color:#D0D0D0'><?=ECMS_ShowEditorVar("newstext",$ecmsfirstpost==1?"":stripSlashes($r[newstext]),"Default","","300","100%")?>
 <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#DBEAF5">
           <tr> 
             <td bgcolor="#FFFFFF"> <input name="dokey" type="checkbox" value="1"<?=$r[dokey]==1?' checked':''?>>
@@ -132,4 +138,8 @@ if(!defined('InEmpireCMS'))
       )</td>
           </tr>
         </table>
-</div>
+</div><table width='100%' align=center cellpadding=3 cellspacing=1 bgcolor='#DBEAF5'><tr><td width='16%' height=25 bgcolor='ffffff'>技术参数</td><td bgcolor='ffffff'>
+<input name="technology" type="text" id="technology" value="<?=$ecmsfirstpost==1?"":ehtmlspecialchars(stripSlashes($r[technology]))?>" size="">
+</td></tr><tr><td width='16%' height=25 bgcolor='ffffff'>产品配置</td><td bgcolor='ffffff'>
+<input name="product" type="text" id="product" value="<?=$ecmsfirstpost==1?"":ehtmlspecialchars(stripSlashes($r[product]))?>" size="">
+</td></tr></table>

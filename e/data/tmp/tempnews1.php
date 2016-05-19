@@ -24,27 +24,7 @@ if(!defined('InEmpireCMS'))
     <script src="/cms/skin/default/js/kandytabs.pack.js" type=text/javascript></script>
     <script src="/cms/skin/default/js/custom.js" type=text/javascript></script>
     <link href="/cms/skin/default/css/page.css" rel="stylesheet" type="text/css">
-    <script type=text/javascript>
-        function menuFix() {
-            var sfEls = document.getElementById("menuu").getElementsByTagName("li");
-            for (var i=0; i<sfEls.length; i++) {
-                sfEls[i].onmouseover=function() {
-                    this.className+=(this.className.length>0? " ": "") + "sfhover";
-                }
-                sfEls[i].onMouseDown=function() {
-                    this.className+=(this.className.length>0? " ": "") + "sfhover";
-                }
-                sfEls[i].onMouseUp=function() {
-                    this.className+=(this.className.length>0? " ": "") + "sfhover";
-                }
-                sfEls[i].onmouseout=function() {
-                    this.className=this.className.replace(new RegExp("( ?|^)sfhover\\b"),
-                            "");
-                }
-            }
-        }
-        window.onload=menuFix;
-    </script>
+ 
     <title><?=$grpagetitle?></title>
   <meta name="keywords" content="<?=$ecms_gr[keyboard]?>" />
     <meta name="description" content="<?=$grpagetitle?>" />
@@ -66,27 +46,10 @@ if(!defined('InEmpireCMS'))
 </style>
 <body >
 <!--头部开始-->
-<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="/cms/skin/default/css/common.css" rel="stylesheet" type="text/css">
 <script type=text/javascript>
-    function menuFix() {
-        var sfEls = document.getElementById("menuu").getElementsByTagName("li");
-        for (var i=0; i<sfEls.length; i++) {
-            sfEls[i].onmouseover=function() {
-                this.className+=(this.className.length>0? " ": "") + "sfhover";
-            }
-            sfEls[i].onMouseDown=function() {
-                this.className+=(this.className.length>0? " ": "") + "sfhover";
-            }
-            sfEls[i].onMouseUp=function() {
-                this.className+=(this.className.length>0? " ": "") + "sfhover";
-            }
-            sfEls[i].onmouseout=function() {
-                this.className=this.className.replace(new RegExp("( ?|^)sfhover\\b"),
-                        "");
-            }
-        }
-    }
-    window.onload=menuFix;
+  
+    //window.onload=menuFix;
 </script>
 
 <div class="pageWidth header">
@@ -176,10 +139,10 @@ if(!defined('InEmpireCMS'))
 <tr>
 <td><table width="100%" border="0" cellpadding="0" cellspacing="0" class="title_info">
 <tr>
-<td><h1>[!--title--]</h1></td>
+<td><h1><?=$ecms_gr[title]?></h1></td>
 </tr>
 <tr>
-<td class="info_text">时间：[!--newstime--]&nbsp;&nbsp;来源：[!--befrom--]&nbsp;&nbsp;作者：[!--writer--]</td>
+<td class="info_text">时间：<?=date('Y-m-d H:i:s',$ecms_gr[newstime])?>&nbsp;&nbsp;来源：[!--befrom--]&nbsp;&nbsp;作者：[!--writer--]</td>
 </tr>
 </table>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">

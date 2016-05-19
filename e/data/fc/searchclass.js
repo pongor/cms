@@ -1,1 +1,1 @@
-document.write("<option value=\'58\'>|-产品中心</option><option value=\'59\'>&nbsp;&nbsp;|-固定气体检测</option><option value=\'60\'>&nbsp;&nbsp;|-便携式气体检测</option><option value=\'61\'>|-首页banner图片</option>");
+document.write("<option value=\'58\'>|-产品中心</option><option value=\'59\'>&nbsp;&nbsp;|-固定气体检测</option><option value=\'60\'>&nbsp;&nbsp;|-便携式气体检测</option><option value=\'61\'>|-首页banner图片</option><option value=\'62\'>|-新闻</option>");

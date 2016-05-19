@@ -27,3 +27,4 @@ function etabit(btn){
 		document.getElementById(tabName+"_div_"+id).style.display = "block";
 		btn.className = "curr";
 };
+
