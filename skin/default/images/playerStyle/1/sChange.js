@@ -21,7 +21,11 @@ if (!String.prototype.trim) {
 		return this.replace(/(^\s*)|(\s*$)/g, "");
 	};
 }
+
 /**
+
+
+
  * "mini" Selector Engine by James Padolsey
  * 迷你元素选择器，支持以下选择方式
  * tag
