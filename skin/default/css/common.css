@@ -47,17 +47,17 @@ body{ background:#FFF; text-align:center; color:#747474;}
 .main,.footer{padding-right:13px;}
 
 .header .navall{height:90px; width:751px;}
-.header .nav{ background:url(../images/navbg.jpg) no-repeat left bottom; height:56px; width:751px;}
+.header .nav{ background:url(../images/navbg.jpg) no-repeat left bottom; height:56px; width:765px;}
 .header .navbg{ height:98px;}
 .header .logo{ height:71px; width:188px; padding-top:17px;}
 .header .c_or_en{ text-align:right; padding-right:30px; height:34px; line-height:34px;}
 .header .en{ color:#156CCA;}
-.header .nav ul{ width:500px; height:39px; line-height:39px; float:left;}
-.header .nav ul li{ float:left; height:39px; line-height:39px; width: 50px; text-align: center;background:url(../images/nav_line.png) no-repeat center right; position:relative; z-index:1000;}
+.header .nav ul{ width:545px; height:39px; line-height:39px; float:left;}
+.header .nav ul li{ float:left; height:39px; line-height:39px; width: 60px; text-align: center;background:url(../images/nav_line.png) no-repeat center right; position:relative; z-index:1000;}
 .header .nav ul li.onlywidth { width: 80px;}
 .header .nav ul li a{height:39px; line-height:39px; font-size:14px; color:#FFFFFF; display:block; text-decoration:none;}
 .header .nav ul li.noline{ background:none;}
-.header .nav .search{ width:220px; overflow:hidden; margin: 7px 0; text-align:right; padding-right: 13px;}
+.header .nav .search{ width:207px; overflow:hidden; margin: 7px 0; text-align:right; padding-right: 13px;}
 .header .nav .search input.seartext{ vertical-align:middle; border:none; height:24px; line-height:24px; width:165px; background:url(../images/searchtextbg.jpg) repeat-x center left;}
 .header .nav .search input.searbtn{ vertical-align:middle; border:none; color:#FFFFFF; height:24px; line-height:24px; width:42px; background:url(../images/searchbg.jpg) no-repeat center right; }
 .header .nav ul li a.current{ background:url(../images/navcurrent.jpg) center bottom no-repeat; font-weight:bold;}

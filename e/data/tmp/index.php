@@ -46,67 +46,10 @@ if(!defined('InEmpireCMS'))
         <div class="navall fr">
             <div class="c_or_en"><a href="/cms/" class="en" target="_blank">English</a></div>
             <div class="nav" id="menuu">
-                <ul>
-                    <li><a id="index" href="/cms/">首页</a></li>
-                    <li style="width: 63px;">
-                        <a id="000030" href="cp/index.shtml">关于我们</a>
-                        <ul>
-                            <li  style="width:90px;"><a href="cp/kjsyb/yqcp/index.shtml">企业介绍模板</a></li>
-
-                            <li  style="width:90px;"><a href="cp/kjsyb/hcysj/index.shtml">文章最终页</a></li>
-
-                        </ul>
-                    </li>
-                    <li><a id="000031" href="bw/index.shtml">产品</a>
-                        <ul>
-                            <!--循环：catalog count：50-->
-
-                            <li style="width:130px;"><a href="http://bioservices.capitalbio.com//">产品目录页</a></li>
-
-                            <li style="width:130px;"><a href="http://health.capitalbio.com">产品列表页</a></li>
-
-                            <li style="width:130px;"><a href="bw/wjgjsbw/jsfw/index.shtml">产品最终页</a></li>
-
-                        </ul>
-                    </li>
-                    <li class="onlywidth"><a id="000032" href="khqc/yhsyb/jswd/index.shtml">应用方案</a>
-                        <ul>
-                            <!--循环：catalog count：50-->
-
-                            <li style="width:140px;"><a href="http://science.capitalbio.com/khfbwz/smkxsbxg/index.shtml" target="_blank">工业安全</a></li>
-
-                            <li style="width:140px;"><a href="khqc/yhsyb/jswd/gsfbwxyzz/index.shtml" target="_blank">维修保养</a></li>
-
-                        </ul>
-                    </li>
-                    <li class="noline onlywidth"><a id="000033" href="gxba/gcgc/gcjg/index.shtml">服务与支持</a>
-                        <ul>
-                            <!--循环：catalog count：50-->
-
-                            <li style="width:84px;"><a href="gxba/gcgc/gcjg/index.shtml">售后服务</a></li>
-
-                            <li style="width:84px;"><a href="gxba/zxgc/zxjg/index.shtml">技术知识</a></li>
-
-                            <li style="width:84px;"><a href="gxba/xwzx/index.shtml">多媒体中心</a></li>
-
-                            <li style="width:84px;"><a href="gxba/jsxj/jsbs/index.shtml">资料下载</a></li>
-
-                            <li style="width:84px;"><a href="gxba/ljwm/lxfs/index.shtml">维修申请</a></li>
-                            <li style="width:84px;"><a href="gxba/ljwm/lxfs/index.shtml">网上留言</a></li>
-
-                        </ul>
-                    </li>
-                    <li class="noline onlywidth"><a id="000033" href="gxba/gcgc/gcjg/index.shtml">研发创新</a>
-                    <ul>
-                    <li style="width:100px;"><a href="gxba/jsxj/jsbs/index.shtml">研发团队</a></li>
-                    <li style="width:100px;"><a href="gxba/jsxj/jsbs/index.shtml">对外交流合作</a></li>
-                        </ul>
-                    </li>
-                    <li class="000031"><a id="000033" href="gxba/gcgc/gcjg/index.shtml">成功案例</a>
-
-                    </li>
-                </ul>
-                <div class="search fr">
+<ul>
+<? @sys_ForShowSonClass(0,16,0,0);?>
+</ul>
+                                <div class="search fr">
                     <form action="" style="padding:0px; margin:0px;">
                         <input type="hidden" id="site" name="site" value="1" />
                         <input class="seartext" name="query" id="query" type="text"/><input class="searbtn" type="submit" value="搜索" />
@@ -179,11 +122,11 @@ if(!defined('InEmpireCMS'))
                     .changeBox_style3 .a_last:hover { background-position:0 -20px; }
                     .changeBox_style3 .a_next:hover { background-position:-20px -20px; }
                 </style>
-<? @sys_GetEcmsInfo(62,1,0,0,12,14,1,0,0);?>
+<? @sys_GetEcmsInfo(62,1,0,0,2,14,1,0,0);?>
             <div class="newslist">
                 <ul>
                     <!--循环：article count：5-->
-<? @sys_GetEcmsInfo(62,5,0,0,1,15,0,0,0);?>
+<? @sys_GetEcmsInfo(62,5,0,0,12,15,0,0,0);?>
 
                 </ul>
             </div>
@@ -215,7 +158,7 @@ if(!defined('InEmpireCMS'))
         </div>
     </div>
     <div class="mainright">
-        <h2>成功案例</h2>
+        <h2>行业应用方案</h2>
         <div class="service">
             <div class="service_list">
                 <img src="/cms/skin/default/images/250235956.jpg" alt=""/>
