@@ -2779,6 +2779,7 @@ function FormatPath($classid,$mynewspath,$enews=0){
 	$path=ECMS_PATH.ReturnSaveInfoPath($classid,$id);
 	$returnpath="";
 	$r=explode("/",$newspath);
+    @mkDirs($path); //自带创建目录函数不好用 2016--5-20 11：19
 	$count=count($r);
 	for($i=0;$i<$count;$i++){
 		if($i>0)
@@ -3011,6 +3012,7 @@ function FormatFilePath($classid,$mynewspath,$enews=0){
 	$path=eReturnEcmsMainPortPath().$fspath['filepath'];//moreport
 	$returnpath="";
 	$r=explode("/",$newspath);
+    @mkDirs($path);
 	$count=count($r);
 	for($i=0;$i<$count;$i++){
 		if($i>0){
@@ -3048,6 +3050,7 @@ function DoTranFile($file,$file_name,$file_type,$file_size,$classid,$ecms=0){
 	$filepath=$r[filepath]?$r[filepath].'/':$r[filepath];
 	//存放目录
 	$fspath=ReturnFileSavePath($classid);
+
 	$r[savepath]=eReturnEcmsMainPortPath().$fspath['filepath'].$filepath;//moreport
 	//附件地址
 	$r[url]=$fspath['fileurl'].$filepath.$r[filename];
@@ -3071,6 +3074,7 @@ function DoTranFile($file,$file_name,$file_type,$file_size,$classid,$ecms=0){
 	}
 	//上传文件
 	$cp=@move_uploaded_file($file,$r[yname]);
+
 	if(empty($cp))
 	{
 		if($doetran)
@@ -3091,6 +3095,17 @@ function DoTranFile($file,$file_name,$file_type,$file_size,$classid,$ecms=0){
 		$efileftp_fr[]=$r['yname'];
 	}
 	return $r;
+}
+function mkDirs($dir){
+    if(!is_dir($dir)){
+        if(!mkDirs(dirname($dir))){
+            return false;
+        }
+        if(!mkdir($dir,0777)){
+            return false;
+        }
+    }
+    return true;
 }
 
 //远程保存忽略地址

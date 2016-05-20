@@ -47,7 +47,7 @@ if(!defined('InEmpireCMS'))
             <div class="c_or_en"><a href="/cms/" class="en" target="_blank">English</a></div>
             <div class="nav" id="menuu">
 <ul>
-<? @sys_ForShowSonClass(0,16,0,0);?>
+<!--<? @sys_ForShowSonClass(0,16,0,0);?> ---><? @sys_ForShowSonClasss(0,16,0,0);?> -
 </ul>
                                 <div class="search fr">
                     <form action="" style="padding:0px; margin:0px;">
@@ -125,7 +125,6 @@ if(!defined('InEmpireCMS'))
 <? @sys_GetEcmsInfo(62,1,0,0,2,14,1,0,0);?>
             <div class="newslist">
                 <ul>
-                    <!--循环：article count：5-->
 <? @sys_GetEcmsInfo(62,5,0,0,12,15,0,0,0);?>
 
                 </ul>
@@ -136,47 +135,15 @@ if(!defined('InEmpireCMS'))
             <h2><span><a href="gxba/activities/index.shtml">更多</a></span>成功案例</h2>
             <!--循环：article count：3-->
 
-
-            <div class="activecommon">
-                <div class="imgplayer fl"><img src="/cms/skin/default/images/1_249595887.jpg" height="70" width="105" /></div>
-
-                <div class="clear"></div>
-            </div>
-
-
-            <div class="activecommon">
-                <div class="imgplayer fl"><img src="/cms/skin/default/images/1_249136984.jpg" height="70" width="105" /></div>
-                <div class="clear"></div>
-            </div>
-
-
-            <div class="activecommon">
-                <div class="imgplayer fl"><img src="/cms/skin/default/images/1_246177700.jpg" height="70" width="105" /></div>
-                <div class="clear"></div>
-            </div>
+<? @sys_GetEcmsInfo(66,4,0,0,2,17,1,0,0);?>
 
         </div>
     </div>
     <div class="mainright">
-        <h2>行业应用方案</h2>
-        <div class="service">
-            <div class="service_list">
-                <img src="/cms/skin/default/images/250235956.jpg" alt=""/>
-                <span>工业安全</span>
-            </div>
-            <div class="service_list">
-                <img src="/cms/skin/default/images/250235956.jpg" alt=""/>
-                <span>工业安全</span>
-            </div>
-            <div class="service_list">
-                <img src="/cms/skin/default/images/250235956.jpg" alt=""/>
-                <span>工业安全</span>
-            </div>
-            <div class="service_list">
-                <img src="/cms/skin/default/images/250235956.jpg" alt=""/>
-                <span>工业安全</span>
-            </div>
-        </div>
+
+
+            <? @sys_ShowClassByTemp(69,18,0,0);?>
+            
 
     </div>
 </div>
@@ -184,8 +151,8 @@ if(!defined('InEmpireCMS'))
     <div class="f_content">Copyright&nbsp;&#169;&nbsp;2000-2014博奥生物集团有限公司&nbsp;京ICP备05068228号&nbsp;《互联网药品信息服务资格证书》：（京）-非经营性-2011-0017&nbsp;服务监督电话：800-810-1927&nbsp;&nbsp;技术支持：<a style="color:#747474;" href="http://www.zving.com" target="_blank">泽元软件</a></div>
 </div>
 <script type="text/javascript">
-    var curCatalogInnerCode=document.getElementById("index");//获取当前页面所在栏目的InnerCode，这句不能够写在外部js文件里
-    curCatalogInnerCode.className+=" menucurrent current";
+ //   var curCatalogInnerCode=document.getElementById("index");//获取当前页面所在栏目的InnerCode，这句不能够写在外部js文件里
+//    curCatalogInnerCode.className+=" menucurrent current";
 </script>
 </body>
 </html>

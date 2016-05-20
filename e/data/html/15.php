@@ -53,4 +53,7 @@ if(!defined('InEmpireCMS'))
 <a onclick="window.open('ecmseditor/FileMain.php?type=1&classid=<?=$classid?>&infoid=<?=$id?>&filepass=<?=$filepass?>&sinfo=1&doing=1&field=titlepic<?=$ecms_hashur[ehref]?>','','width=700,height=550,scrollbars=yes');" title="选择已上传的图片"><img src="../data/images/changeimg.gif" border="0" align="absbottom"></a> 
 </td></tr><tr><td width='16%' height=25 bgcolor='ffffff'>发布时间</td><td bgcolor='ffffff'>
 <input name="newstime" type="text" value="<?=$r[newstime]?>"><input type=button name=button value="设为当前时间" onclick="document.add.newstime.value='<?=$todaytime?>'">
+</td></tr><tr><td width='16%' height=25 bgcolor='ffffff'>简介</td><td bgcolor='ffffff'><textarea name="smalltext" cols="60" rows="10" id="smalltext"><?=$ecmsfirstpost==1?"":ehtmlspecialchars(stripSlashes($r[smalltext]))?></textarea>
+</td></tr><tr><td width='16%' height=25 bgcolor='ffffff'>详情</td><td bgcolor='ffffff'>
+<?=ECMS_ShowEditorVar("xiangqing",$ecmsfirstpost==1?"":stripSlashes($r[xiangqing]),"Default","","300","100%")?>
 </td></tr></table>

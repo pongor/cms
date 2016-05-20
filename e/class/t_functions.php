@@ -1655,11 +1655,54 @@ function sys_ShowClassByTemp($classid,$tempid,$show=0,$cline=0){
     $string=$list_r[0].$string.$list_r[2];
 	echo $string;
 }
+//循环子栏目导航标签
+function sys_ForShowSonClasss($classid,$tempid,$show=0,$cline=0){
+    global $navclassid,$empire,$class_r,$public_r,$dbtbpre;
+    //多栏目
 
+    if(strstr($classid,","))
+    {
+        $where='classid in ('.$classid.')';
+    }
+    else
+    {
+        if($classid=="selfinfo")//当前栏目
+        {
+            $classid=intval($navclassid);
+        }
+        $where="bclassid='$classid'";
+    }
+    //取得模板
+    $tr=sys_ReturnBqTemp($tempid);
+    if(empty($tr['tempid']))
+    {return "";}
+    $tr[temptext]=str_replace('[!--news.url--]',$public_r[newsurl],$tr[temptext]);
+    $tr[listvar]=str_replace('[!--news.url--]',$public_r[newsurl],$tr[listvar]);
+    //限制条数
+    if($cline)
+    {
+        $limit=" limit ".$cline;
+    }
+    $no=1;
+    $sql = "select classid,classname,islast,sonclass,tbname,intro,classimg,infos from c_enewsclass where bclassid='0' and showclass=0 order by myorder,classid";
+    //$sql=$empire->query("select classid,classname,islast,sonclass,tbname,intro,classimg,infos from {$dbtbpre}enewsclass where ".$where." and showclass=0 order by myorder,classid".$limit);
+    $sql=$empire->query($sql);
+    while($r=$empire->fetch($sql))
+    {
+        //显示栏目数据数
+        if($show)
+        {
+            $num=ReturnClassInfoNum($r);
+        }
+        sys_GetShowClassMore($r[classid],$r,$tr,$no,$num,$show);
+        $no++;
+    }
+}
 //循环子栏目导航标签
 function sys_ForShowSonClass($classid,$tempid,$show=0,$cline=0){
 	global $navclassid,$empire,$class_r,$public_r,$dbtbpre;
 	//多栏目
+
 	if(strstr($classid,","))
 	{
 		$where='classid in ('.$classid.')';
@@ -1683,9 +1726,11 @@ function sys_ForShowSonClass($classid,$tempid,$show=0,$cline=0){
 	{
 		$limit=" limit ".$cline;
 	}
+   ///echo "select classid,classname,islast,sonclass,tbname,intro,classimg,infos from {$dbtbpre}enewsclass where ".$where." and showclass=0 order by myorder,classid".$limit;
 	$no=1;
-	$sql=$empire->query("select classid,classname,islast,sonclass,tbname,intro,classimg,infos from {$dbtbpre}enewsclass where ".$where." and showclass=0 order by myorder,classid".$limit);
-	while($r=$empire->fetch($sql))
+    $sql=$empire->query("select classid,classname,islast,sonclass,tbname,intro,classimg,infos from {$dbtbpre}enewsclass where ".$where." and showclass=0 order by myorder,classid".$limit);
+
+    while($r=$empire->fetch($sql))
 	{
 		//显示栏目数据数
 		if($show)
